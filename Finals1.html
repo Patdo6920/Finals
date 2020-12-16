@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Finals</title>
+
+  <link rel="stylesheet" href="Finals.css"/>
+
+
+ <script>
+		function validate(){
+			var fname = document.getElementById("a").value;
+			var mname = document.getElementById("b").value;
+			var lname = document.getElementById("c").value;
+			var contact = document.getElementById("d").value;
+			var email = document.getElementById("e").value;
+			var user = document.getElementById("f").value;
+			var pass = document.getElementById("g").value;
+			var confirmpass = document.getElementById("h").value;
+
+			 if(fname.length < 5){
+    			alert("Please Enter valid first Name");
+    			return false;
+  				}
+  			if(mname.length < 5){
+    			alert("Please Enter valid middle Name");
+    			return false;
+  				}
+  			if(lname.length < 5){
+    			alert("Please Enter valid last Name");
+
+    			return false;
+ 				}
+
+  			if(isNaN(contact) || contact.length != 11){
+    			alert("Please Enter correct phone number");
+    			return false;
+  				}
+  			if(email.indexOf("@") == -1 || email.length < 5){
+    			alert("Please Enter correct email");
+   			 	return false;
+  				}
+  			if(user.length < 5){
+    			alert("Username should not be less than 5 characters");
+    			return false;
+ 			}
+  			if(pass.length <5){
+    			alert("password should not be less than 5 characters");
+    			return false;
+ 				}
+  			if(pass != confirmpass){
+    			alert("Password should match");
+    			return false;
+  				}
+
+  			alert("Sucessfully submitted");
+
+  			return true;
+				}
+    </script>
+</head>
+
+<body>
+       <div class="login-box">
+  <h2>Login</h2>
+  <form>
+    <div class="user-box">
+      <input type="text" name="" required="" id="a">
+      <label>First Name</label>
+    </div>
+    <div class="user-box">
+      <input type="text" name="" required="" id="b">
+      <label>Middle Name</label>
+    </div>
+    <div class="user-box">
+      <input type="text" name="" required="" id="c">
+      <label>Last Name</label>
+    </div>
+    <div class="user-box">
+      <input type="number" name="" required="" id="d">
+      <label>Contact Number</label>
+    </div>
+    <div class="user-box">
+      <input type="Email" name="" required="" id="e">
+      <label>Email</label>
+    </div>
+     <div class="user-box">
+      <input type="text" name="" required="" id="f">
+      <label>Username</label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="" required="" id="g">
+      <label>Password</label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="" required="" id="h">
+      <label>Confirm Password</label>
+    </div>
+
+
+    <a href="finals.html" class="btn-success btn-block" onclick="validate()">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Register
+    </a>
+
+  </form>
+</div>
+</body>
+
+</html>
